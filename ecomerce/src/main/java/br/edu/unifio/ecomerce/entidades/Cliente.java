@@ -1,5 +1,8 @@
 package br.edu.unifio.ecomerce.entidades;
 
+import org.apache.logging.log4j.message.StringFormattedMessage;
+
+import jakarta.annotation.Generated;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,11 +12,12 @@ import lombok.Setter;
 
 @Entity
 @Getter
-@Setter
-public class Categoria {
+@Setter 
+public class Cliente {
     @Id 
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private Short id;
+    private Integer id;
     private String nome;
-    private String descricao;
+    private String email;
+    private String telefone;
 }
